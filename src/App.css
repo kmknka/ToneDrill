@@ -11,7 +11,16 @@
   - font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;フォントの優先順序を指定。
   - text-align: center;文字やインライン要素を中央揃えに。
 */
-.App {
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #282c34;  /* .app-container と同じ色 */
+  color: white;               /* 文字色も統一 */
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.app-container {
   max-width: 400px;
   margin: 40px auto;
   padding: 20px;
@@ -23,28 +32,75 @@
   text-align: center;
 }
 
-h1 {
-  margin-bottom: 20px;
+select {
+  cursor: pointer;
 }
 
-label {
-  display: block;
-  margin-bottom: 8px;
+/* tuning-section の スタイル */
+.tuning-section {
+  display: inline-block;
+  margin-right: 10px;
   font-weight: bold;
-  text-align: left;
+  color: #61dafb;
 }
 
-input[type="text"] {
-  width: 100%;
-  padding: 8px;
+.tuning-section label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.tuning-select-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+  gap: 8px;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.tuning-select-row label {
+  width: 40px; /* ラベル幅固定で整列 */
+  text-align: right;
+}
+
+.tuning-select-row select {
+  flex-grow: 1;
+  padding: 6px 8px;
   font-size: 16px;
   border-radius: 4px;
   border: 1px solid #ccc;
-  box-sizing: border-box;
-  margin-bottom: 16px;
+  cursor: pointer;
 }
 
-button {
+/* controls のスタイル */
+.controls {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.controls label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: #61dafb;
+}
+
+.controls select {
+  width: 100%;
+  padding: 6px 8px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  margin-bottom: 12px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.confirm button {
   background-color: #61dafb;
   border: none;
   color: #282c34;
@@ -54,14 +110,54 @@ button {
   cursor: pointer;
   font-size: 16px;
   transition: background-color 0.3s ease;
+  flex-shrink: 0; /* ボタンが縮まらないように */
 }
 
-button:hover {
+/* input-row: input と button を横並びに */
+.input-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+/* input は幅いっぱいに広げる */
+.input-row input {
+  flex: 1;
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* button のスタイル（既存を引き継ぎつつ調整） */
+.input-row button {
+  background-color: #61dafb;
+  border: none;
+  color: #282c34;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  flex-shrink: 0; /* ボタンが縮まらないように */
+}
+
+.input-row button:hover {
   background-color: #21a1f1;
 }
 
-strong {
-  font-size: 18px;
-  color: #61dafb;
+/* メッセージログの見た目 */
+.message-log {
+  margin-top: 20px;
+  max-height: 200px;
+  overflow-y: auto;
+  text-align: left;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #ddd;
+  border-top: 1px solid #61dafb;
+  padding-top: 10px;
 }
 
