@@ -1,38 +1,67 @@
+/* App.css */
+/* このCSSは、Reactアプリケーションのスタイルを定義しています。
+  - .App はReactコンポーネントの一番外側の <div className="App"> に対応します。
+  - max-width: 400px;最大横幅を400ピクセルに制限して、あまり広くならないように。
+  - margin: 40px auto;上下に40ピクセルの余白を作り、左右はautoで中央寄せ。
+  - padding: 20px;内側の余白（コンテンツと枠の間）を20ピクセル。
+  - border: 2px solid #61dafb;青色の2ピクセルの実線ボーダー。
+  - border-radius: 8px;角を8ピクセル丸くして、柔らかい印象に。
+  - background-color: #282c34;暗めの紺色系の背景色。
+  - color: white;文字色を白に設定。
+  - font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;フォントの優先順序を指定。
+  - text-align: center;文字やインライン要素を中央揃えに。
+*/
 .App {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 20px;
+  border: 2px solid #61dafb;
+  border-radius: 8px;
+  background-color: #282c34;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  margin-bottom: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  text-align: left;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  margin-bottom: 16px;
 }
 
-.App-link {
+button {
+  background-color: #61dafb;
+  border: none;
+  color: #282c34;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #21a1f1;
+}
+
+strong {
+  font-size: 18px;
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}

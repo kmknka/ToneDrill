@@ -1,3 +1,25 @@
+/*
+1. body { margin: 0; }
+ブラウザのデフォルト余白を消す設定。
+
+各ブラウザでは body に初期マージン（空白）があるため、それを消してレイアウトを制御しやすくする。
+
+2. font-family: ...
+テキストに使うフォントの優先順位を指定。
+
+端末のOSに合わせて「最適なフォント」を選んで表示します。
+
+Apple なら -apple-system（San Francisco）、Windows なら Segoe UI など。
+
+3. -webkit-font-smoothing / -moz-osx-font-smoothing
+文字を滑らかに表示するための補助設定（主にMac向け）。
+
+アンチエイリアス処理で文字がきれいに見えるようになります。
+
+4. code { font-family: ... }
+<code> 要素（例：<code>const x = 10;</code>）のフォントをモノスペースに指定。
+ */
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
